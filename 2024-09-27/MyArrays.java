@@ -20,7 +20,7 @@ public class MyArrays {
     for (int i = 0; i < newArray.length; i++){
       newArray[i] = ary[i];
     }
-    ary[0] = ary[0] + 1;
-    return newArray;
-    }
+    ary[0] = 7;
+    return ary;
+  }
 }
