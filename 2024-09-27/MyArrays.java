@@ -15,11 +15,23 @@ public class MyArrays {
     }
     System.out.println("Same Values: " + sameValue);
 
-    //Check if arrays are the same
+    //Check if arrays are the same array
     array[0] = 99;
     System.out.println("\nModified Array: " + arrayToString(array));
     System.out.println("Copied Array: " + arrayToString(copy));
 
+    //Check if arrays have different values
+    System.out.println("\nModified Array: " + arrayToString(array));
+    System.out.println("Copied Array: " + arrayToString(copy));
+
+    //Check if arrays have the same values
+    for (int i = 0; i < copy.length; i++){
+      if (copy[i] != array[i]){
+        sameValue = false;
+      }
+    }
+    System.out.println("Same Values: " + sameValue);
+    //Check array concatentation
     int[] array1 = {0, 1, 2, 3, 4, 5};
     int[] array2 = {6, 7, 8, 9};
 
@@ -64,5 +76,4 @@ public class MyArrays {
     }
     return newArray;
   }
-
 }
