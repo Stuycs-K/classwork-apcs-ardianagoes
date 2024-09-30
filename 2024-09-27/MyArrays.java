@@ -24,7 +24,6 @@ public class MyArrays {
     System.out.println("\nModified Array: " + arrayToString(array));
     System.out.println("Copied Array: " + arrayToString(copy));
 
-    //Check if arrays have the same values
     for (int i = 0; i < copy.length; i++){
       if (copy[i] != array[i]){
         sameValue = false;
