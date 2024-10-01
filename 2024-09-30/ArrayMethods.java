@@ -5,7 +5,7 @@ public class ArrayMethods
     public static void main(String[] args)
     {
         int[] array1D = new int[]{2, 3, 4, 9};
-        int[][] array1 = new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}};
+        int[][] array1 = new int[][]{{2, 3, 4}, {5, 6, 7}, {2,    4, 9}};
         int[][] array2 = new int[][]{{2, 7}, {3, 6, 1}, {7}};
 
         // 1D Array to String Method Tests
@@ -24,6 +24,16 @@ public class ArrayMethods
         System.out.println("\nSum of the values in Array 1: " + arr2DSum(array1));
         System.out.println("Sum of the values in Array 2: " + arr2DSum(array2));
         // 2D Array Sum Method Tests
+
+        int[][] array3 = new int[][]{{1, 2, 3}, {4, 5, 6}};
+        int[][] array4 = new int[][]{{1, 4},{2, 5},{3, 6}};
+
+        // swapRC Method Tests
+        System.out.println(arrToString(swapRC(array3))); // --> {{1, 4},{2, 5},{3, 6}}
+        System.out.println(arrToString(swapRC(array4))); // --> {{1, 2, 3},{4, 5, 6}}
+        // swapRC Method Tests
+
+
     }
 
     public static String arrToString(int[] array)
@@ -63,10 +73,7 @@ public class ArrayMethods
         }
         return sum;
     }
-    /*
     public static int[][] swapRC(int[][] nums){
-        int arr1Length = nums[0].length;
-        int arr2Length = nums.length;
-        int [][] returnArray = new int[arr1Length][arr2Length];
-    }*/
+        return null;
+    }
 }
