@@ -20,7 +20,10 @@ public class ArrayMethods
         System.out.println(arrToString(array2));
         // 2D Array to String Method Tests
 
-        System.out.println(arr2DSum(array1));
+        // 2D Array Sum Method Tests
+        System.out.println("\nSum of the values in Array 1: " + arr2DSum(array1));
+        System.out.println("Sum of the values in Array 2: " + arr2DSum(array2));
+        // 2D Array Sum Method Tests
     }
 
     public static String arrToString(int[] array)
