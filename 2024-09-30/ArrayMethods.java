@@ -29,11 +29,9 @@ public class ArrayMethods
         int[][] array4 = new int[][]{{1, 4},{2, 5},{3, 6}};
 
         // swapRC Method Tests
-        System.out.println(arrToString(swapRC(array3))); // --> {{1, 4},{2, 5},{3, 6}}
-        System.out.println(arrToString(swapRC(array4))); // --> {{1, 2, 3},{4, 5, 6}}
+        System.out.println("\nOriginal Array 3: " + arrToString(array3) + " --> " + arrToString(swapRC(array3))); // --> {{1, 4},{2, 5},{3, 6}}
+        System.out.println("Original Array 4: " + arrToString(array4) + " --> " + arrToString(swapRC(array4))); // --> {{1, 2, 3}, {4, 5, 6}}
         // swapRC Method Tests
-
-
     }
 
     public static String arrToString(int[] array)
@@ -73,7 +71,19 @@ public class ArrayMethods
         }
         return sum;
     }
-    public static int[][] swapRC(int[][] nums){
-        return null;
+
+    public static int[][] swapRC(int[][] nums)
+    {
+      int rows = nums[0].length;
+      int columns = nums.length;
+      int[][] returnArray = new int[rows][columns];
+      for (int n = 0; n < columns; n++)
+      {
+        for (int i = 0; i < rows; i++)
+        {
+            returnArray[i][n] = nums[n][i];
+        }
+      }
+      return returnArray;
     }
 }
