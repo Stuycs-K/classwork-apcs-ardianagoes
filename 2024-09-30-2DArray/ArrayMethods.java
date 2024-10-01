@@ -9,6 +9,8 @@ public class ArrayMethods
         int[][] array1 = new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}};
         int[][] array2 = new int[][]{{2, 7}, {3, 6, 1}, {7}};
         int[][] array3 = new int[][]{{11, 12}, {}, {20, 21}};
+        int[][] array35 = new int[][]{{}, {}, {}, {}, {}, {}, {}, {}, {}};
+
 
         // 1D Array to String Method Tests
         System.out.println("\n1D Array1D as String: ");
@@ -24,12 +26,15 @@ public class ArrayMethods
         System.out.println(arrToString(array2));
         System.out.println("\nArray 3 as a String: ");
         System.out.println(arrToString(array3));
+        System.out.println("\nArray 35 as a String: ");
+        System.out.println(arrToString(array35));
         // 2D Array to String Method Tests
 
         // 2D Array Sum Method Tests
-        System.out.println("\nSum of the values in Array 1: " + arr2DSum(array1));
-        System.out.println("Sum of the values in Array 2: " + arr2DSum(array2));
-        System.out.println("Sum of the values in Array 3: " + arr2DSum(array3));
+        System.out.println("\nSum of the values in Array 1: " + arr2DSum(array1)); // 42
+        System.out.println("Sum of the values in Array 2: " + arr2DSum(array2)); // 26
+        System.out.println("Sum of the values in Array 3: " + arr2DSum(array3)); // 64
+        System.out.println("Sum of the values in Array 35: " + arr2DSum(array35)); // 0
         // 2D Array Sum Method Tests
 
         int[][] array4 = new int[][]{{1, 2, 3}, {4, 5, 6}};
