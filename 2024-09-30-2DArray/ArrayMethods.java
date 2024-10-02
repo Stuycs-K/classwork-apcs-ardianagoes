@@ -18,7 +18,6 @@ public class ArrayMethods
         System.out.println("\n1D Array1D2 as String: ");
         System.out.println(arrToString(array1D2));
         System.out.println("\n-------1D Array to String Method Tests-------");
-
         // 1D Array to String Method Tests
 
         // 2D Array to String Method Tests
