@@ -101,23 +101,40 @@ public class ArrayMethods
       return returnArray;
     }
 
+    public static void replaceNegative(int[][] vals)
+    {
+      for (int i = 0; i < vals.length; i++)
+      {
+        for (int j = 0; j < vals[i].length; j++)
+        {
+          if (vals[i][j] < 0)
+          {
+            if (i == j)
+                vals[i][j] = 1;
+            else
+                vals[i][j] = 0;
+          }
+        }
+      }
+    }
+
     public static int[][] copy(int[][] nums)
     {
-    int[][] thingy =  new int[nums.length][0];
+    int[][] returnArray =  new int[nums.length][0];
     for(int i = 0; i < nums.length; i++)
     {
-        thingy[i] = copy(nums[i]);
+        returnArray[i] = copy(nums[i]);
     }
-    return thingy;
+    return returnArray;
     }
 
     public static int[] copy(int[] nums)
     {
-      int[] thingy = new int[nums.length];
+      int[] returnArray = new int[nums.length];
       for(int i = 0; i < nums.length; i++)
       {
-          thingy[i] = nums[i];
+          returnArray[i] = nums[i];
       }
-      return thingy;
+      return returnArray;
     }
 }
