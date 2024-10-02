@@ -100,4 +100,24 @@ public class ArrayMethods
       }
       return returnArray;
     }
+
+    public static int[][] copy(int[][] nums)
+    {
+    int[][] thingy =  new int[nums.length][0];
+    for(int i = 0; i < nums.length; i++)
+    {
+        thingy[i] = copy(nums[i]);
+    }
+    return thingy;
+    }
+
+    public static int[] copy(int[] nums)
+    {
+      int[] thingy = new int[nums.length];
+      for(int i = 0; i < nums.length; i++)
+      {
+          thingy[i] = nums[i];
+      }
+      return thingy;
+    }
 }
