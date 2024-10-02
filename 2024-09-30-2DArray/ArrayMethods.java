@@ -46,6 +46,22 @@ public class ArrayMethods
         System.out.println("Original Array 5: " + arrToString(array5) + " --> " + arrToString(swapRC(array5))); // --> {{1, 2, 3}, {4, 5, 6}}
         System.out.println("Original Array 5: " + arrToString(array6) + " --> " + arrToString(swapRC(array6))); // --> {{6, 9},{4, 0}}
         // swapRC Method Tests
+
+        //replaceNegative Method Tests
+        int[][] array7 = new int[][]{{-1, -2, -3}, {-4, -5, -6} , {-7, -8, -9}};
+        System.out.println("\nOriginal Array 7: " + arrToString(array7));
+        replaceNegative(array7);
+        System.out.println("New Array 7: " + arrToString(array7));
+        int[][] array8 = new int[][]{{-1, 15151, -3}, {15151, -5, -6} , {-7, 15151}};
+        System.out.println("\nOriginal Array 8: " + arrToString(array8));
+        replaceNegative(array8);
+        System.out.println("New Array 8: " + arrToString(array8));
+        int[][] array9 = new int[][]{{-1, 0}, {-1, 0}};
+        System.out.println("\nOriginal Array 9: " + arrToString(array9));
+        replaceNegative(array9);
+        System.out.println("New Array 9: " + arrToString(array9));
+        //replaceNegative Method Tests
+
     }
 
     public static String arrToString(int[] array)
