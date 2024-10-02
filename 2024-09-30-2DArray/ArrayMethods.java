@@ -62,6 +62,17 @@ public class ArrayMethods
         System.out.println("New Array 9: " + arrToString(array9));
         //replaceNegative Method Tests
 
+        //Copy 2D Array Method Tests
+        int[][] array10 = new int[][]{{-1, -2, -3}, {-4, -5, -6}};
+        int[][] array10Copy = copy(array10);
+
+        System.out.println("\nOriginal Array: " + array10);
+        System.out.println("Copied Array: " + array10Copy);
+        array10[0][0] = 1049104;
+        System.out.println("\nModified Array: " + array10);
+        System.out.println("Copied Array: " + array10Copy);
+        //Copy 2D Array Method Tests
+
     }
 
     public static String arrToString(int[] array)
