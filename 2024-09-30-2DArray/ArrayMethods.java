@@ -1,5 +1,5 @@
 // Maxim Argat (maxima5@nycstudents.net) and Ardian Agoes (ardiana@nycstudents.net)
-
+//MAIN FILE AND DIRECTORY. OTHER COMMITS AND PROGRESS CAN BE SEEN IN THE OLD DIRECTORY (2024-09-30)
 public class ArrayMethods
 {
     public static void main(String[] args)
