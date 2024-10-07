@@ -11,6 +11,12 @@ public class ArrayDemo{
     System.out.println(arr2DSum(array1));
     replaceNegative(array1);
     System.out.println(arrToString(array1));
+    int[][] array1Copy = copy(array1);
+    System.out.println("\nOriginal Array 1: " + arrToString(array1));
+    System.out.println("Copied Array 1: " + arrToString(array1Copy));
+    array1[0][0] = 93999;
+    System.out.println("\nModified Array 1: " + arrToString(array1));
+    System.out.println("Copied Array 1: " + arrToString(array1Copy));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -95,10 +101,26 @@ public class ArrayDemo{
   //When testing : make sure that changing the original does NOT change the copy.
   //DO NOT use any built in methods that "copy" an array.
   //You SHOULD write a helper method for this.
-  //If you don't see a good way to do that, you should stop and look at prior methods.
-  public static int[][] copy(int[][] nums){
-    return new int[1][1];
+  //If you don't see a good way to do that, you should stop and look at prior methods
+
+  public static int[] copyHelper(int[] nums)
+  {
+    int[] returnArray = new int[nums.length];
+    for(int i = 0; i < nums.length; i++)
+    {
+        returnArray[i] = nums[i];
+    }
+    return returnArray;
   }
+
+  public static int[][] copy(int[][] nums)
+  {
+    int[][] returnArray =  new int[nums.length][0];
+    for(int i = 0; i < nums.length; i++)
+    {
+        returnArray[i] = copyHelper(nums[i]);
+    }
+    return returnArray;  }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
