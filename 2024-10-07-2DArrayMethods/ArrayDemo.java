@@ -6,9 +6,11 @@ public class ArrayDemo{
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
 
-    int[][] array1 = new int[][]{{0, 0, 0}, {5, 6, 7}, {2, 4, 9}};
+    int[][] array1 = new int[][]{{0, 0, 0}, {-5, 6, -2}, {2, -1000, -9}};
     System.out.println(countZeros2D(array1));
     System.out.println(arr2DSum(array1));
+    replaceNegative(array1);
+    System.out.println(arrToString(array1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -40,7 +42,8 @@ public class ArrayDemo{
     }
 
   //1. Calculate and return how many elements equal zero in the 2D array.
-  public static int countZeros2D(int[][] nums){
+  public static int countZeros2D(int[][] nums)
+  {
     int zeroCount = 0;
     for (int i = 0; i < nums.length; i++){
       for (int n = 0; n < nums[i].length; n++){
@@ -55,7 +58,8 @@ public class ArrayDemo{
   //2. Calculate the sum of a 2d array
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
-  public static int arr2DSum(int[][]nums){
+  public static int arr2DSum(int[][]nums)
+  {
         int sum = 0;
         for (int i = 0; i < nums.length; i++){
           for (int n = 0; n < nums[i].length; n++){
@@ -65,15 +69,26 @@ public class ArrayDemo{
         return sum;
   }
 
-
-
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
   //-When the row number is the same as the column number replace
   //that negative with the value 1
   //-All other negatives replace with 0
-  public static void replaceNegative(int[][] vals){
-
+  public static void replaceNegative(int[][] vals)
+  {
+    for (int i = 0; i < vals.length; i++)
+    {
+      for (int j = 0; j < vals[i].length; j++)
+      {
+        if (vals[i][j] < 0)
+        {
+          if (i == j)
+              vals[i][j] = 1;
+          else
+              vals[i][j] = 0;
+        }
+      }
+    }
   }
 
   //4. Make a copy of the given 2d array.
