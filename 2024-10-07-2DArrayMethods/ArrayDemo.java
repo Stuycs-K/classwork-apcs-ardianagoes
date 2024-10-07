@@ -8,6 +8,7 @@ public class ArrayDemo{
 
     int[][] array1 = new int[][]{{0, 0, 0}, {5, 6, 7}, {2, 4, 9}};
     System.out.println(countZeros2D(array1));
+    System.out.println(arr2DSum(array1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -55,8 +56,16 @@ public class ArrayDemo{
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
   public static int arr2DSum(int[][]nums){
-    return 0;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++){
+          for (int n = 0; n < nums[i].length; n++){
+            sum += nums[i][n];
+          }
+        }
+        return sum;
   }
+
+
 
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
