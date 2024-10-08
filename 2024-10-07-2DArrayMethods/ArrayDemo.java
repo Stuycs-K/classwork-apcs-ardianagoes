@@ -17,6 +17,9 @@ public class ArrayDemo{
     array1[0][0] = 93999;
     System.out.println("\nModified Array 1: " + arrToString(array1));
     System.out.println("Copied Array 1: " + arrToString(array1Copy));
+
+    int[][] array2 = new int[][]{{1, 2, 3}, {4, 5, 6}};
+    System.out.println("\nOriginal Array 1: " + arrToString(array2) + " --> " + arrToString(swapRC(array2)));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -125,8 +128,19 @@ public class ArrayDemo{
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
   //   e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
-  public static int[][] swapRC(int[][]nums){
-    return new int[1][1];
+  public static int[][] swapRC(int[][]nums)
+  {
+    int rows = nums[0].length;
+    int columns = nums.length;
+    int[][] returnArray = new int[rows][columns];
+    for (int n = 0; n < columns; n++)
+    {
+      for (int i = 0; i < rows; i++)
+      {
+          returnArray[i][n] = nums[n][i];
+      }
+    }
+    return returnArray;
   }
 
   //6. Make an HTML table by putting a table tag around the entire 2d array,
