@@ -52,20 +52,39 @@ public class ArrayDemo{
     System.out.println("\n-------replaceNegative Method Tests-------");
     //replaceNegative Method Tests
 
-    System.out.println(countZeros2D(array1));
-    System.out.println(arr2DSum(array1));
-    replaceNegative(array1);
-    System.out.println(arrToString(array1));
-    int[][] array1Copy = copy(array1);
-    System.out.println("\nOriginal Array 1: " + arrToString(array1));
-    System.out.println("Copied Array 1: " + arrToString(array1Copy));
-    array1[0][0] = 93999;
-    System.out.println("\nModified Array 1: " + arrToString(array1));
-    System.out.println("Copied Array 1: " + arrToString(array1Copy));
+    //copy Method Tests
+    System.out.println("\n-------copy Method Tests-------");
+    int[][] array9 = new int[][]{{-2, 1, -3}, {-41, 56, 97}};
+    int[][] array9Copy = copy(array9);
 
-    int[][] array9 = new int[][]{{1, 2, 3}, {4, 5, 6}};
-    System.out.println("\nOriginal Array 1: " + arrToString(array2) + " --> " + arrToString(swapRC(array2)));
-    System.out.println(htmlTable(array2));
+    System.out.println("\nOriginal Array 9: " + arrToString(array9));
+    System.out.println("Copied Array 9: " + arrToString(array9Copy));
+    array9[0][0] = 1049104;
+    System.out.println("\nModified Array 9: " + arrToString(array9));
+    System.out.println("Copied Array 9: " + arrToString(array9Copy));
+
+    int[][] array10 = new int[][]{{31, 23, 47}, {-41}};
+    int[][] array10Copy = copy(array10);
+
+    System.out.println("\nOriginal Array 10: " + arrToString(array10));
+    System.out.println("Copied Array 10: " + arrToString(array10Copy));
+    array10[0][0] = 93999;
+    System.out.println("\nModified Array 10 " + arrToString(array10));
+    System.out.println("Copied Array 10: " + arrToString(array10Copy));
+    System.out.println("\n-------copy Method Tests-------");
+    //copy Method Tests
+
+    int[][] array11 = new int[][]{{1, 2, 3}, {4, 5, 6}};
+    int[][] array12 = new int[][]{{1, 4},{2, 5},{3, 6}};
+    int[][] array13 = new int[][]{{6, 9},{4, 0}};
+
+    // swapRC Method Tests
+    System.out.println("\n-------swapRC Method Tests-------");
+    System.out.println("\nOriginal Array 11: " + arrToString(array11) + " --> " + arrToString(swapRC(array11)));
+    System.out.println("Original Array 12: " + arrToString(array12) + " --> " + arrToString(swapRC(array12)));
+    System.out.println("Original Array 13: " + arrToString(array13) + " --> " + arrToString(swapRC(array13)));
+    System.out.println("\n-------swapRC Method Tests-------");
+    // swapRC Method Tests
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
