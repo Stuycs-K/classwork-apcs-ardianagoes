@@ -20,6 +20,7 @@ public class ArrayDemo{
 
     int[][] array2 = new int[][]{{1, 2, 3}, {4, 5, 6}};
     System.out.println("\nOriginal Array 1: " + arrToString(array2) + " --> " + arrToString(swapRC(array2)));
+    System.out.println(htmlTable(array2));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -150,6 +151,14 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
-  }
+    String table = "<table>";
+    for (int i = 0; i < nums.length; i++){
+      table += "<tr>";
+      for (int n = 0; n < nums[i].length; n++){
+        table += "<td>" + nums[i][n] + "</td>";
+      }
+      table += "</tr>";
+    }
+  return table + "</table>";
+}
 }
