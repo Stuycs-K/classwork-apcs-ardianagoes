@@ -77,6 +77,7 @@ public class ArrayDemo{
     int[][] array11 = new int[][]{{1, 2, 3}, {4, 5, 6}};
     int[][] array12 = new int[][]{{1, 4},{2, 5},{3, 6}};
     int[][] array13 = new int[][]{{6, 9},{4, 0}};
+    int[][] array14 = new int[][]{{}, {}};
 
     //swapRC Method Tests
     System.out.println("\n-------swapRC Method Tests-------");
@@ -94,6 +95,8 @@ public class ArrayDemo{
     System.out.println(htmlTable(array12));
     System.out.println("\nOriginal Array: " + arrToString(array13));
     System.out.println(htmlTable(array13));
+    System.out.println("\nOriginal Array: " + arrToString(array14));
+    System.out.println(htmlTable(array14));
     System.out.println("\n-------htmlTable Method Tests-------");
     //htmlTable Method Tests
   }
@@ -130,8 +133,10 @@ public class ArrayDemo{
   public static int countZeros2D(int[][] nums)
   {
     int zeroCount = 0;
-    for (int i = 0; i < nums.length; i++){
-      for (int n = 0; n < nums[i].length; n++){
+    for (int i = 0; i < nums.length; i++)
+    {
+      for (int n = 0; n < nums[i].length; n++)
+      {
         if (nums[i][n] == 0){
           zeroCount++;
         }
@@ -146,8 +151,10 @@ public class ArrayDemo{
   public static int arr2DSum(int[][]nums)
   {
         int sum = 0;
-        for (int i = 0; i < nums.length; i++){
-          for (int n = 0; n < nums[i].length; n++){
+        for (int i = 0; i < nums.length; i++)
+        {
+          for (int n = 0; n < nums[i].length; n++)
+          {
             sum += nums[i][n];
           }
         }
@@ -199,7 +206,8 @@ public class ArrayDemo{
     {
         returnArray[i] = copyHelper(nums[i]);
     }
-    return returnArray;  }
+    return returnArray;
+  }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
@@ -225,15 +233,18 @@ public class ArrayDemo{
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-  public static String htmlTable(int[][]nums){
+  public static String htmlTable(int[][]nums)
+  {
     String table = "<table>";
-    for (int i = 0; i < nums.length; i++){
+    for (int i = 0; i < nums.length; i++)
+    {
       table += "<tr>";
-      for (int n = 0; n < nums[i].length; n++){
+      for (int n = 0; n < nums[i].length; n++)
+      {
         table += "<td>" + nums[i][n] + "</td>";
       }
       table += "</tr>";
     }
   return table + "</table>";
-}
+  }
 }
