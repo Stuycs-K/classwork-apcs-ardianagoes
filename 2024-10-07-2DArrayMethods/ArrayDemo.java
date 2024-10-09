@@ -6,7 +6,18 @@ public class ArrayDemo{
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
 
-    int[][] array1 = new int[][]{{0, 0, 0}, {-5, 6, -2}, {2, -1000, -9}};
+    int[][] array1 = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    //arrayToString() Method Tests
+    System.out.println("\n-------arrToString() Method Tests-------");
+    System.out.println("\nArrays.deepToString --> " + Arrays.deepToString(array1));
+    System.out.println("arraysToString() --> " + arrToString(array1));
+    System.out.println("\n-------arrToString() Method Tests-------");
+
+    //arrayToString() Method Tests
+
+    int[][] array2 = new int[][]{{1, 3}, {4, 6}, {7, 9}};
+    int[][] array3 = new int[][]{{-1, 3}, { 6}, {7, 9, -10}};
+    int[][] array10 = new int[][]{{0, 0, 0}, {-5, 6, -2}, {2, -1000, -9}};
     System.out.println(countZeros2D(array1));
     System.out.println(arr2DSum(array1));
     replaceNegative(array1);
@@ -18,7 +29,7 @@ public class ArrayDemo{
     System.out.println("\nModified Array 1: " + arrToString(array1));
     System.out.println("Copied Array 1: " + arrToString(array1Copy));
 
-    int[][] array2 = new int[][]{{1, 2, 3}, {4, 5, 6}};
+    int[][] array9 = new int[][]{{1, 2, 3}, {4, 5, 6}};
     System.out.println("\nOriginal Array 1: " + arrToString(array2) + " --> " + arrToString(swapRC(array2)));
     System.out.println(htmlTable(array2));
   }
