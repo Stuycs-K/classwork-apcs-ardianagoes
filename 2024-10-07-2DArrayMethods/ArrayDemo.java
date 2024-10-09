@@ -78,13 +78,24 @@ public class ArrayDemo{
     int[][] array12 = new int[][]{{1, 4},{2, 5},{3, 6}};
     int[][] array13 = new int[][]{{6, 9},{4, 0}};
 
-    // swapRC Method Tests
+    //swapRC Method Tests
     System.out.println("\n-------swapRC Method Tests-------");
     System.out.println("\nOriginal Array 11: " + arrToString(array11) + " --> " + arrToString(swapRC(array11)));
     System.out.println("Original Array 12: " + arrToString(array12) + " --> " + arrToString(swapRC(array12)));
     System.out.println("Original Array 13: " + arrToString(array13) + " --> " + arrToString(swapRC(array13)));
     System.out.println("\n-------swapRC Method Tests-------");
-    // swapRC Method Tests
+    //swapRC Method Tests
+
+    //htmlTable Method Tests
+    System.out.println("\n-------htmlTable Method Tests-------");
+    System.out.println("\nOriginal Array: " + arrToString(array11));
+    System.out.println(htmlTable(array11));
+    System.out.println("\nOriginal Array: " + arrToString(array12));
+    System.out.println(htmlTable(array12));
+    System.out.println("\nOriginal Array: " + arrToString(array13));
+    System.out.println(htmlTable(array13));
+    System.out.println("\n-------htmlTable Method Tests-------");
+    //htmlTable Method Tests
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
