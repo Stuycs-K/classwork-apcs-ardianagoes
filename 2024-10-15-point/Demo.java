@@ -61,24 +61,28 @@ public class Demo {
    System.out.println("\n-----Testing Non-Static Point distanceTo() Method-----");
    //------------------------------------------------------------------------//
 
-   System.out.println(distance(p1,p2));
-   System.out.println(Point.distance(p1,p2));
-   System.out.println(p1.distanceTo(p2));
-   System.out.println(distance(p2,p1));
-   System.out.println(Point.distance(p2,p1));
-   System.out.println(p2.distanceTo(p1));
-   System.out.println(distance(p3,p4));
-   System.out.println(Point.distance(p3,p4));
-   System.out.println(p3.distanceTo(p4));
+   //------------------------------------------------------------------------//
+   System.out.println("\n\n-----Testing Static Point distance() Method-----");
+   System.out.println("\nPoint p1: " + p1);
+   System.out.println("Point p2: " + p2);
+   System.out.println("Distance between p1 and p2: " + Point.distance(p1, p2));
+   System.out.println("Distance between p2 and p1: " + Point.distance(p2, p1));
+   System.out.println("Distance between p1 and p5: " + Point.distance(p1, p5));
+   System.out.println("Distance between p1 and p6: " + Point.distance(p1, p5));
+
+   System.out.println("\nDistance between p3 and p4: " + Point.distance(p3, p4));
+   System.out.println("Distance between p4 and p3: " + Point.distance(p4, p3));
+   System.out.println("Distance between p6 and p8: " + Point.distance(p6, p8));
+   System.out.println("Distance between p5 and p7: " + Point.distance(p5, p7));
+   System.out.println("\n-----Testing Static Point distance() Method-----");
+   //------------------------------------------------------------------------//
 
    Point triPoint1 = new Point(0, 0);
    Point triPoint2 = new Point(2, 0);
-
+   Point triPoint3 = new Point(1, Math.sqrt(3));
    // 1^2 + x^2 = 2^2
    // 1 + x^2 = 4
    // x^2 = 3
-
-   Point triPoint3 = new Point(1, Math.sqrt(3));
 
    System.out.println("Side Length Between Point 1 and 2: " + distance(triPoint1, triPoint2));
    System.out.println("Side Length Between Point 1 and 3: " + triPoint1.distanceTo(triPoint3));
