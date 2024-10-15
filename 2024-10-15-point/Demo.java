@@ -18,6 +18,7 @@ public class Demo {
    Point p7 = new Point(100, 100);
    Point p8 = new Point(p7);
 
+   //------------------------------------------------------------------------//
    System.out.println("\n\n-----Testing Point(Point other) constructor-----");
    System.out.println("\nOriginal Point p3: " + p3);
    System.out.println("Point p4: " + p4);
@@ -26,7 +27,9 @@ public class Demo {
    System.out.println("\nOriginal Point p6: " + p7);
    System.out.println("Point p8: " + p8);
    System.out.println("\n-----Testing Point(Point other) constructor-----");
+   //------------------------------------------------------------------------//
 
+   //------------------------------------------------------------------------//
    System.out.println("\n\n-----Testing Static Demo distance() Method-----");
    System.out.println("\nPoint p1: " + p1);
    System.out.println("Point p2: " + p2);
@@ -40,6 +43,23 @@ public class Demo {
    System.out.println("Distance between p6 and p8: " + distance(p6, p8));
    System.out.println("Distance between p5 and p7: " + distance(p5, p7));
    System.out.println("\n-----Testing Static Demo distance() Method-----");
+   //------------------------------------------------------------------------//
+
+   //------------------------------------------------------------------------//
+   System.out.println("\n\n-----Testing Non-Static Point distanceTo() Method-----");
+   System.out.println("\nPoint p1: " + p1);
+   System.out.println("Point p2: " + p2);
+   System.out.println("Distance between p1 and p2: " + p1.distanceTo(p2));
+   System.out.println("Distance between p2 and p1: " + p2.distanceTo(p1));
+   System.out.println("Distance between p1 and p5: " + p1.distanceTo(p5));
+   System.out.println("Distance between p1 and p6: " + p1.distanceTo(p6));
+
+   System.out.println("\nDistance between p3 and p4: " + p3.distanceTo(p4));
+   System.out.println("Distance between p4 and p3: " + p4.distanceTo(p3));
+   System.out.println("Distance between p6 and p8: " + p6.distanceTo(p8));
+   System.out.println("Distance between p5 and p7: " + p5.distanceTo(p7));
+   System.out.println("\n-----Testing Non-Static Point distanceTo() Method-----");
+   //------------------------------------------------------------------------//
 
    System.out.println(distance(p1,p2));
    System.out.println(Point.distance(p1,p2));
