@@ -77,6 +77,8 @@ public class Demo {
    System.out.println("\n-----Testing Static Point distance() Method-----");
    //------------------------------------------------------------------------//
 
+   //------------------------------------------------------------------------//
+   System.out.println("\n\n-----Testing Three Distance Methods with a Triangle-----");
    Point triPoint1 = new Point(0, 0);
    Point triPoint2 = new Point(2, 0);
    Point triPoint3 = new Point(1, Math.sqrt(3));
@@ -84,10 +86,14 @@ public class Demo {
    // 1 + x^2 = 4
    // x^2 = 3
 
-   System.out.println("Side Length Between Point 1 and 2: " + distance(triPoint1, triPoint2));
+   System.out.println("\nTriangle Point 1: " + triPoint1);
+   System.out.println("Triangle Point 2: " + triPoint2);
+   System.out.println("Triangle Point 3: " + triPoint3);
+
+   System.out.println("\nSide Length Between Point 1 and 2: " + distance(triPoint1, triPoint2));
    System.out.println("Side Length Between Point 1 and 3: " + triPoint1.distanceTo(triPoint3));
    System.out.println("Side Length Between Point 2 and 3: " + Point.distance(triPoint2, triPoint3));
-
-
- }
+   System.out.println("\n-----Testing Three Distance Methods with a Triangle-----\n");
+   //------------------------------------------------------------------------//
+  }
 }

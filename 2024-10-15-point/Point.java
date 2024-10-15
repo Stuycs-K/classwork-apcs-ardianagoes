@@ -1,5 +1,5 @@
 public class Point {
-    
+
   private double x,y;
 
   public String toString(){
@@ -17,9 +17,11 @@ public class Point {
     this.x=x;
     this.y=y;
   }
+
   public double getX(){
     return x;
   }
+
   public double getY(){
     return y;
   }
@@ -29,7 +31,6 @@ public class Point {
   */
   public double distanceTo(Point other){
     return Math.sqrt(Math.pow(other.x - getX(), 2) + Math.pow(other.y - getY(), 2));
-
   }
 
   /*
@@ -39,6 +40,5 @@ public class Point {
   public static double distance(Point a, Point b){
      return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
   }
-
 
 }
