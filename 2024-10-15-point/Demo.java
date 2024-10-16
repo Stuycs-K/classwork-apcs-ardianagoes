@@ -19,14 +19,14 @@ public class Demo {
    Point p8 = new Point(p7);
 
    //------------------------------------------------------------------------//
-   System.out.println("\n\n-----Testing Point(Point other) constructor-----");
+   System.out.println("\n\n-----Testing Point(Point other) Constructor-----");
    System.out.println("\nOriginal Point p3: " + p3);
    System.out.println("Point p4: " + p4);
    System.out.println("\nOriginal Point p5: " + p5);
    System.out.println("Point p6: " + p6);
    System.out.println("\nOriginal Point p6: " + p7);
    System.out.println("Point p8: " + p8);
-   System.out.println("\n-----Testing Point(Point other) constructor-----");
+   System.out.println("\n-----Testing Point(Point other) Constructor-----");
    //------------------------------------------------------------------------//
 
    //------------------------------------------------------------------------//
@@ -95,5 +95,6 @@ public class Demo {
    System.out.println("Side Length Between Point 2 and 3: " + Point.distance(triPoint2, triPoint3));
    System.out.println("\n-----Testing Three Distance Methods with a Triangle-----\n");
    //------------------------------------------------------------------------//
+
   }
 }
