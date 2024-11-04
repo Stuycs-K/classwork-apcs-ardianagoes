@@ -10,6 +10,7 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       int counter = 0;
+      /* Prints every other line of text
       while(input.hasNextLine()){
           counter++;
           if (counter % 2 != 1){
@@ -18,7 +19,13 @@ public class ReadFile {
           else {
             System.out.println(input.nextLine());
           }
-          //do something with the next line of the file
+      }
+      */
+      while(input.hasNextLine()){
+        String currentLine = input.nextLine();
+          if (currentLine.contains("{")){
+            System.out.println(currentLine);
+          }
       }
       input.close();//releases the file from your program
 
