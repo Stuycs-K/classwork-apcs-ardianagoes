@@ -17,7 +17,7 @@ public class TriangleTester {
       while (input.hasNextLine()){
         String currentLine = input.nextLine();
         String[] currentArray = new String[3];
-        currentArray = currentLine.split("");
+        currentArray = currentLine.split(" ");
           if (checkTriangle(currentArray)){
             counter++;
           }
@@ -35,11 +35,11 @@ public class TriangleTester {
     for (int i = 0; i < array.length; i++){
       intArray[i] = Integer.parseInt(array[i]);
     }
-    return (intArray[0] + intArray[1] < intArray[2] && intArray[2] + intArray[1] < intArray[0] && intArray[0] + intArray[2] < intArray[1]);
+    return (intArray[0] + intArray[1] > intArray[2] && intArray[2] + intArray[1] > intArray[0] && intArray[0] + intArray[2] > intArray[1]);
 
     //return (Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2])) < (Integer.parseInt(array[0]) + Integer.parseInt(array[1]) + Integer.parseInt(array[2]) - Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2]))));
   }
 
 }
 
-//
+//95
