@@ -7,6 +7,7 @@ public class TriangleTester {
 
   public static void main(String[] args){
     System.out.println(countTrianglesA("inputTri.txt"));
+    System.out.println(countTrianglesB("inputTri.txt"));
 
   }
 
@@ -47,6 +48,15 @@ public class TriangleTester {
         column2.add(currentArray[1]);
         column3.add(currentArray[2]);
           }
+      for (int i = 0; i < column1.size(); i++){
+        String[] stringArray = new String[3];
+        stringArray[0] = column1.get(0);
+        stringArray[1] = column1.get(1);
+        stringArray[2] = column1.get(2);
+        if (checkTriangle(stringArray)){
+          counter++;
+        }
+      }
       return counter;
     }  catch (FileNotFoundException ex) {
         //File not found what should you do?
