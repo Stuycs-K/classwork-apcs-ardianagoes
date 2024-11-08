@@ -1,9 +1,9 @@
-// When we overrided the getName() method, whenever we use the getName() with an object of the bird class, it returns The MIGHTY and the name/
-// When we use the getName() method with an object of the Animal class (using animal constructor), it will not add the MIGHTY...
-// This tells us that overridden methods apply only in objects of the class with the overridden method
-// This gave us an error because an animal is not always a bird.
-// In this instance, we tried defining a bird as an animal, which is not always true, resulting in an error.
-//
+// By overriding the getName() method, whenever we used the getName() method with an object of the Bird class, it returns The MIGHTY, following its name.
+// When we used the getName() method with an object of the Animal class, it does not add the MIGHTY...
+// This tells us that overridden methods apply only in objects of the subclass with the overridden method.
+// Creating Bird b2 gave us an error because an animal is not always a bird.
+// In this instance, we tried defining an animal as a bird, which is not always true, resulting in an error.
+// Birds are a subclass of Animals, since birds are a type of animal (a bird is an animal, but an animal is not a bird).
 
 public class Driver {
   public static void main(String[] args){
