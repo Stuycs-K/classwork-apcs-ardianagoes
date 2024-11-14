@@ -7,7 +7,7 @@ public class ArrayListPractice {
     System.out.println(Triangle);
     replaceEmpty(Triangle);
     System.out.println(Triangle);
-
+    System.out.println(makeReversedList(Triangle));
 
   }
 
@@ -33,6 +33,12 @@ public class ArrayListPractice {
       }
     }
   }
-
+  public static ArrayList<String> makeReversedList(ArrayList<String> original){
+    ArrayList<String> reverse = new ArrayList<String>(original.size());
+    for(int i = original.size()-1; i>= 0; i--){
+      reverse.add(original.get(i));
+    }
+    return reverse;
+  }
 
 }
