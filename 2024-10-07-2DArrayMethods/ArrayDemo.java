@@ -6,20 +6,99 @@ public class ArrayDemo{
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
 
-    int[][] array1 = new int[][]{{0, 0, 0}, {-5, 6, -2}, {2, -1000, -9}};
-    System.out.println(countZeros2D(array1));
-    System.out.println(arr2DSum(array1));
-    replaceNegative(array1);
-    System.out.println(arrToString(array1));
-    int[][] array1Copy = copy(array1);
-    System.out.println("\nOriginal Array 1: " + arrToString(array1));
-    System.out.println("Copied Array 1: " + arrToString(array1Copy));
-    array1[0][0] = 93999;
-    System.out.println("\nModified Array 1: " + arrToString(array1));
-    System.out.println("Copied Array 1: " + arrToString(array1Copy));
+    int[][] array1 = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-    int[][] array2 = new int[][]{{1, 2, 3}, {4, 5, 6}};
-    System.out.println("\nOriginal Array 1: " + arrToString(array2) + " --> " + arrToString(swapRC(array2)));
+    //arrayToString() Method Tests
+    System.out.println("\n-------arrToString() Method Tests-------");
+    System.out.println("\nArrays.deepToString --> " + Arrays.deepToString(array1));
+    System.out.println("arrToString() --> " + arrToString(array1));
+    System.out.println("\n-------arrToString() Method Tests-------");
+    //arrayToString() Method Tests
+
+    int[][] array2 = new int[][]{{10, -30}, {-40, 60}, {70, 90, 10}};
+    int[][] array3 = new int[][]{{0, 0}, {0}, {0, 0, 0}};
+    int[][] array4 = new int[][]{{0, 0, 0}, {0, 0, -2}, {2, -1000, -9}};
+
+    //countZeros2D Method Tests
+    System.out.println("\n-------countZeros2D Method Tests-------");
+    System.out.println("\n" + arrToString(array2) + "--> Zero Count: " + countZeros2D(array2));
+    System.out.println(arrToString(array3) + "--> Zero Count: " + countZeros2D(array3));
+    System.out.println(arrToString(array4) + "--> Zero Count: " + countZeros2D(array4));
+    System.out.println("\n-------countZeros2D Method Tests-------");
+    //countZeros2D Method Tests
+
+    //arr2DSum Method Tests
+    System.out.println("\n-------arr2DSum Method Tests-------");
+    System.out.println("\nSum of the values in Array 2: " + arr2DSum(array2));
+    System.out.println("Sum of the values in Array 3: " + arr2DSum(array3));
+    System.out.println("Sum of the values in Array 4: " + arr2DSum(array4));
+    System.out.println("\n-------arr2DSum Method Tests-------");
+    //arr2DSum Method Tests
+
+    //replaceNegative Method Tests
+    System.out.println("\n-------replaceNegative Method Tests-------");
+    int[][] array5 = new int[][]{{-1, -2, -3}, {-4, -5, -6} , {-7, -8, -9}};
+    System.out.println("\nOriginal Array 5: " + arrToString(array5));
+    replaceNegative(array5);
+    System.out.println("New Array 5: " + arrToString(array5));
+    int[][] array6 = new int[][]{{-1, 15151, -3}, {15151, -5, -6} , {-7, 15151}};
+    System.out.println("\nOriginal Array 6: " + arrToString(array6));
+    replaceNegative(array6);
+    System.out.println("New Array 6: " + arrToString(array6));
+    int[][] array7 = new int[][]{{-1, 0}, {-1, 0}};
+    System.out.println("\nOriginal Array 7: " + arrToString(array7));
+    replaceNegative(array7);
+    System.out.println("New Array 7: " + arrToString(array7));
+    System.out.println("\n-------replaceNegative Method Tests-------");
+    //replaceNegative Method Tests
+
+    //copy Method Tests
+    System.out.println("\n-------copy Method Tests-------");
+    int[][] array9 = new int[][]{{-2, 1, -3}, {-41, 56, 97}};
+    int[][] array9Copy = copy(array9);
+
+    System.out.println("\nOriginal Array 9: " + arrToString(array9));
+    System.out.println("Copied Array 9: " + arrToString(array9Copy));
+    array9[0][0] = 1049104;
+    System.out.println("\nModified Array 9: " + arrToString(array9));
+    System.out.println("Copied Array 9: " + arrToString(array9Copy));
+
+    int[][] array10 = new int[][]{{31, 23, 47}, {-41}};
+    int[][] array10Copy = copy(array10);
+
+    System.out.println("\nOriginal Array 10: " + arrToString(array10));
+    System.out.println("Copied Array 10: " + arrToString(array10Copy));
+    array10[0][0] = 93999;
+    System.out.println("\nModified Array 10 " + arrToString(array10));
+    System.out.println("Copied Array 10: " + arrToString(array10Copy));
+    System.out.println("\n-------copy Method Tests-------");
+    //copy Method Tests
+
+    int[][] array11 = new int[][]{{1, 2, 3}, {4, 5, 6}};
+    int[][] array12 = new int[][]{{1, 4},{2, 5},{3, 6}};
+    int[][] array13 = new int[][]{{6, 9},{4, 0}};
+    int[][] array14 = new int[][]{{}, {}};
+
+    //swapRC Method Tests
+    System.out.println("\n-------swapRC Method Tests-------");
+    System.out.println("\nOriginal Array 11: " + arrToString(array11) + " --> " + arrToString(swapRC(array11)));
+    System.out.println("Original Array 12: " + arrToString(array12) + " --> " + arrToString(swapRC(array12)));
+    System.out.println("Original Array 13: " + arrToString(array13) + " --> " + arrToString(swapRC(array13)));
+    System.out.println("\n-------swapRC Method Tests-------");
+    //swapRC Method Tests
+
+    //htmlTable Method Tests
+    System.out.println("\n-------htmlTable Method Tests-------");
+    System.out.println("\nOriginal Array: " + arrToString(array11));
+    System.out.println(htmlTable(array11));
+    System.out.println("\nOriginal Array: " + arrToString(array12));
+    System.out.println(htmlTable(array12));
+    System.out.println("\nOriginal Array: " + arrToString(array13));
+    System.out.println(htmlTable(array13));
+    System.out.println("\nOriginal Array: " + arrToString(array14));
+    System.out.println(htmlTable(array14));
+    System.out.println("\n-------htmlTable Method Tests-------");
+    //htmlTable Method Tests
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -54,8 +133,10 @@ public class ArrayDemo{
   public static int countZeros2D(int[][] nums)
   {
     int zeroCount = 0;
-    for (int i = 0; i < nums.length; i++){
-      for (int n = 0; n < nums[i].length; n++){
+    for (int i = 0; i < nums.length; i++)
+    {
+      for (int n = 0; n < nums[i].length; n++)
+      {
         if (nums[i][n] == 0){
           zeroCount++;
         }
@@ -70,8 +151,10 @@ public class ArrayDemo{
   public static int arr2DSum(int[][]nums)
   {
         int sum = 0;
-        for (int i = 0; i < nums.length; i++){
-          for (int n = 0; n < nums[i].length; n++){
+        for (int i = 0; i < nums.length; i++)
+        {
+          for (int n = 0; n < nums[i].length; n++)
+          {
             sum += nums[i][n];
           }
         }
@@ -123,7 +206,8 @@ public class ArrayDemo{
     {
         returnArray[i] = copyHelper(nums[i]);
     }
-    return returnArray;  }
+    return returnArray;
+  }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
@@ -149,7 +233,18 @@ public class ArrayDemo{
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-  public static String htmlTable(int[][]nums){
-
+  public static String htmlTable(int[][]nums)
+  {
+    String table = "<table>";
+    for (int i = 0; i < nums.length; i++)
+    {
+      table += "<tr>";
+      for (int n = 0; n < nums[i].length; n++)
+      {
+        table += "<td>" + nums[i][n] + "</td>";
+      }
+      table += "</tr>";
+    }
+  return table + "</table>";
   }
 }
