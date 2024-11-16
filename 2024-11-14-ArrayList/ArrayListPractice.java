@@ -16,6 +16,18 @@ public class ArrayListPractice {
     System.out.println("\n" + mixedLists(randomArray1, randomArray2));
     System.out.println(mixedLists(randomArray2, randomArray1));
 
+    ArrayList<String> randomArray3 = createRandomArray(200002);
+    ArrayList<String> randomArray4 = createRandomArray(200001);
+    System.out.println("\n" + randomArray3);
+    System.out.println(randomArray4);
+    replaceEmpty(randomArray3);
+    replaceEmpty(randomArray4);
+    System.out.println("\n" + randomArray3);
+    System.out.println(randomArray4);
+    System.out.println("\n" + makeReversedList(randomArray3));
+    System.out.println(makeReversedList(randomArray4));
+    System.out.println("\n" + mixedLists(randomArray3, randomArray4));
+    System.out.println(mixedLists(randomArray4, randomArray3));
   }
 
   public static ArrayList<String> createRandomArray(int size){
