@@ -3,12 +3,14 @@ import java.util.ArrayList;
 public class ArrayListPractice {
 
   public static void main(String[] args){
-    ArrayList<String> Triangle = createRandomArray(20);
-    System.out.println(Triangle);
-    replaceEmpty(Triangle);
-    System.out.println(Triangle);
-    System.out.println(makeReversedList(Triangle));
-
+    ArrayList<String> randomArray1 = createRandomArray(20);
+    ArrayList<String> randomArray2 = createRandomArray(10);
+    System.out.println(randomArray1);
+    System.out.println(randomArray2);
+    replaceEmpty(randomArray1);
+    replaceEmpty(randomArray2);
+    System.out.println(randomArray1);
+    System.out.println(randomArray2);
   }
 
   public static ArrayList<String> createRandomArray(int size){
@@ -41,4 +43,25 @@ public class ArrayListPractice {
     return reverse;
   }
 
+  public static ArrayList<String> mixedLists(ArrayList<String> a, ArrayList<String> b){
+     ArrayList<String> mixedArray = new ArrayList<String>();
+     ArrayList<String> bigArray = new ArrayList<String>();
+     int minSize = 0;
+     if (a.size() > b.size()){
+       minSize = b.size();
+        bigArray = a;
+     }
+     else {
+       minSize = a.size();
+      bigArray = b;
+     }
+     for (int i = 0; i < minSize; i++){
+       mixedArray.add(a.get(i));
+       mixedArray.add(b.get(i));
+     }
+     for (int i = minSize; i < bigArray.size(); i++){
+       mixedArray.add(bigArray.get(i));
+     }
+     return mixedArray;
+   }
 }
