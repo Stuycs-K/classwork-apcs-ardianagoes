@@ -24,7 +24,7 @@ public class dayOne {
       String[] array = arrayAsString.split(",");
       for (int i = 0; i < array.length; i++){
         if (array[i].charAt(0) == 'R'){
-          if (direction == ('n')){
+          if (direction =='n'){
             direction = 'e';
           }
           else if (direction == 'e'){
@@ -54,14 +54,14 @@ public class dayOne {
         if (direction == 'n'){
           verticalDistance += Integer.parseInt(array[i].substring(1));
         }
-        if (direction == 's'){
+        else if (direction == 's'){
           verticalDistance -= Integer.parseInt(array[i].substring(1));
         }
-        if (direction == 'e'){
+        else if (direction == 'e'){
           horizontalDistance += Integer.parseInt(array[i].substring(1));
         }
-        if (direction == 'w'){
-          verticalDistance -= Integer.parseInt(array[i].substring(1));
+        else if (direction == 'w'){
+          horizontalDistance -= Integer.parseInt(array[i].substring(1));
         }
       }
       return Math.abs(horizontalDistance) + Math.abs(verticalDistance);
@@ -72,5 +72,3 @@ public class dayOne {
       }
   }
 }
-
-//95
