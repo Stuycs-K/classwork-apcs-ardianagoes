@@ -8,6 +8,7 @@ public class dayOne {
 
   public static void main(String[] args){
     System.out.println(countBlocks("text.txt"));
+    System.out.println(countBlocksDay2("text.txt"));
   }
 
   public static int countBlocks(String filename){
@@ -69,6 +70,26 @@ public class dayOne {
         //File not found what should you do?
         System.out.println("File not found");
         return 0; //you can return from a void function just don't put a value.
+      }
+  }
+
+  public static String[] countBlocksDay2(String filename){
+    try {
+      char direction = 'n';
+      int horizontalDistance = 0;
+      int verticalDistance= 0;
+      File file = new File("text.txt");
+      Scanner input = new Scanner(file);
+      String arrayAsString = "";
+      while (input.hasNext()){
+        arrayAsString += input.next();
+          }
+      String[] array = arrayAsString.split(",");
+      return array;
+      } catch (FileNotFoundException ex) {
+        //File not found what should you do?
+        System.out.println("File not found");
+        return new String[3]; //you can return from a void function just don't put a value.
       }
   }
 }
