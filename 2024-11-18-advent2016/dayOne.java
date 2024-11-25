@@ -73,23 +73,104 @@ public class dayOne {
       }
   }
 
-  public static String[] countBlocksDay2(String filename){
+  public static int countBlocksDay2(String filename){
     try {
       char direction = 'n';
-      int horizontalDistance = 0;
-      int verticalDistance= 0;
+      int horizontalCoordinate = 0;
+      int verticalCoordinate= 0;
+      String currentCoordinate = "" + 0 +"," + 0;
       File file = new File("text.txt");
       Scanner input = new Scanner(file);
       String arrayAsString = "";
+      ArrayList<String> coordinates = new ArrayList<String>();
+      coordinates.add(currentCoordinate);
       while (input.hasNext()){
         arrayAsString += input.next();
           }
       String[] array = arrayAsString.split(",");
-      return array;
-      } catch (FileNotFoundException ex) {
+      for (int i = 0; i < array.length; i++){
+        if (array[i].charAt(0) == 'R'){
+          if (direction =='n'){
+            direction = 'e';
+          }
+          else if (direction == 'e'){
+            direction = 's';
+          }
+          else if (direction == 's'){
+            direction = 'w';
+          }
+          else if (direction == 'w') {
+            direction = 'n';
+          }
+        }
+        else if (array[i].charAt(0) == 'L'){
+          if (direction == ('n')){
+            direction = 'w';
+          }
+          else if (direction == 'w'){
+            direction = 's';
+          }
+          else if (direction == 's'){
+            direction = 'e';
+          }
+          else if (direction == 'e') {
+            direction = 'n';
+          }
+        }
+        if (direction == 'n'){
+          for (int n = 0; n < Integer.parseInt(array[i].substring(1)); n++){
+          verticalCoordinate += 1;
+          currentCoordinate = "" + horizontalCoordinate + "," + verticalCoordinate;
+          if (coordinates.contains(currentCoordinate)){
+            return Math.abs(verticalCoordinate) + Math.abs(horizontalCoordinate);
+          }
+          else {
+            coordinates.add("" + horizontalCoordinate + "," + verticalCoordinate);
+          }
+        }
+      }
+        else if (direction == 's'){
+          for (int n = 0; n < Integer.parseInt(array[i].substring(1)); n++){
+          verticalCoordinate -= 1;
+          currentCoordinate = "" + horizontalCoordinate + "," + verticalCoordinate;
+          if (coordinates.contains(currentCoordinate)){
+            return Math.abs(verticalCoordinate) + Math.abs(horizontalCoordinate);
+          }
+          else {
+            coordinates.add("" + horizontalCoordinate + "," + verticalCoordinate);
+          }
+        }
+        }
+        else if (direction == 'e'){
+          for (int n = 0; n < Integer.parseInt(array[i].substring(1)); n++){
+          horizontalCoordinate += 1;
+          currentCoordinate = "" + horizontalCoordinate + "," + verticalCoordinate;
+          if (coordinates.contains(currentCoordinate)){
+            return Math.abs(verticalCoordinate) + Math.abs(horizontalCoordinate);
+          }
+          else {
+            coordinates.add("" + horizontalCoordinate + "," + verticalCoordinate);
+          }
+          }
+        }
+        else if (direction == 'w'){
+          for (int n = 0; n < Integer.parseInt(array[i].substring(1)); n++){
+          horizontalCoordinate -= 1;
+          currentCoordinate = "" + horizontalCoordinate + "," + verticalCoordinate;
+          if (coordinates.contains(currentCoordinate)){
+            return Math.abs(verticalCoordinate) + Math.abs(horizontalCoordinate);
+          }
+          else {
+            coordinates.add("" + horizontalCoordinate + "," + verticalCoordinate);
+          }
+        }
+        }
+    }
+      return 0;
+    } catch (FileNotFoundException ex) {
         //File not found what should you do?
         System.out.println("File not found");
-        return new String[3]; //you can return from a void function just don't put a value.
+        return 0; //you can return from a void function just don't put a value.
       }
   }
 }
