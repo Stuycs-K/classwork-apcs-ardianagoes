@@ -8,6 +8,7 @@ public class Driver {
     System.out.print(Text.HIDE_CURSOR); // Hide the cursor
     makeBorder();
     randomInts();
+    separator();
     Text.go(31, 1); // Move the cursor to the end to avoid overwriting
     System.out.print(Text.RESET); // Reset terminal colors and show the cursor
   }
@@ -51,5 +52,12 @@ public class Driver {
       }
     }
 
+    public static void separator(){
+      Text.color(Text.BRIGHT, Text.BLUE, Text.background(Text.CYAN));
+      for (int col = 1; col <= 80; col++){
+        Text.go(3, col);
+        System.out.println("-");
+      }
+    }
 
 }
