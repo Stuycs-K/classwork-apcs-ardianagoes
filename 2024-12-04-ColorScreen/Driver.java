@@ -1,6 +1,5 @@
 import java.util.Random;
 
-
 public class Driver {
 
   public static void main(String[] args){
@@ -9,10 +8,10 @@ public class Driver {
     makeBorder();
     randomInts();
     separator();
+    smileyFace();
     Text.go(31, 1); // Move the cursor to the end to avoid overwriting
     System.out.print(Text.RESET); // Reset terminal colors and show the cursor
   }
-
 
     public static void makeBorder(){
     Text.color(Text.BRIGHT, Text.BLUE, Text.background(Text.CYAN));
@@ -60,4 +59,13 @@ public class Driver {
       }
     }
 
+    public static void smileyFace(){
+      Text.color(Text.BRIGHT, Text.YELLOW, Text.background(Text.BLACK));
+      Text.go(14, 39);
+      System.out.println("O   O");
+      Text.go(15, 40);
+      System.out.println(" ^");
+      Text.go(16, 39);
+      System.out.println("\\___/");
+    }
 }
