@@ -53,7 +53,7 @@ public class Driver {
 
     public static void separator(){
       Text.color(Text.BRIGHT, Text.BLUE, Text.background(Text.CYAN));
-      for (int col = 1; col <= 80; col++){
+      for (int col = 2; col < 80; col++){
         Text.go(3, col);
         System.out.println("-");
       }
