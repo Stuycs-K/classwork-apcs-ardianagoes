@@ -1,9 +1,15 @@
 public class Driver{
   public static void main(String[] args){
-    Adventurer one = new Warrior("billy", 10);
-    System.out.println(one.getName());
-    System.out.println(one.getHP());
-    System.out.println(one.getmaxHP());
+    Adventurer billy = new Warrior("billy", 100);
+    Adventurer bob = new Warrior("bob", 100);
+
+    System.out.println(billy.getName());
+    System.out.println(billy.getHP());
+    System.out.println(billy.getmaxHP());
+    System.out.println(billy.attack(bob));
+    System.out.println(bob.getHP());
+    System.out.println(bob.specialAttack(billy));
+    System.out.println(billy.getHP());
 
   }
 }
