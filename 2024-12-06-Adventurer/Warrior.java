@@ -44,8 +44,8 @@ public class Warrior extends Adventurer{
   }
 
   public String specialAttack(Adventurer other){
+    if (get)
     other.applyDamage(1);
     return "Attacked other adventurer, dealing 1 damage!";
   }
-
 }
