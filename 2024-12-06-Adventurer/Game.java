@@ -56,8 +56,8 @@ public class Game{
         result = enemy.support();
     }
     System.out.println(result);
-    if (enemy.getHP() <= 0) {
-       System.out.println("\n" + enemy.getName() + " has been defeated! You win!");
+    if (player.getHP() <= 0) {
+       System.out.println("\n" + player.getName() + " has been defeated! Enemy wins!");
        return;
     }
     }
