@@ -2,6 +2,8 @@ public class words{
 
   public static void main(String[] args){
     makeWords(2, "", "abc");
+    makeWords(2, "", "102524");
+
   }
 
   public static void makeWords(int remainingLetters, String result, String alphabet){
@@ -10,10 +12,8 @@ public class words{
     }
     else {
       for (int i = 0; i < alphabet.length(); i++){
-        result += alphabet.charAt(i);
-        remainingLetters--;
-      }
-      makeWords(remainingLetters, result, alphabet);
+      makeWords(remainingLetters - 1, result + alphabet.charAt(i), alphabet);
     }
   }
+}
 }
